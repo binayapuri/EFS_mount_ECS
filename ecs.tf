@@ -135,7 +135,7 @@ module "ecs_service" {
         {
           sourceVolume = local.efs.name
           #   containerPath = "/etc/nginx/efs-mount/server/"
-          containerPath = "/mnt/efs/data/"
+          containerPath = "/mnt/efs/"
           readOnly      = false
         }
       ]

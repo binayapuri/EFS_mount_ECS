@@ -18,12 +18,12 @@
 import os
 
 # Define base paths for text and pdf files
-text_base_path = "/mnt/efs/data/text"
-pdf_base_path = "/mnt/efs/data/data"
+# text_base_path = "/mnt/efs/text"
+pdf_base_path = "/mnt/efs/data"
 
 def save_file(filename, content, base_path):
     # Ensure the directory exists
-    os.makedirs(base_path, exist_ok=True)
+    # os.makedirs(base_path, exist_ok=True)
     
     # Construct the full file path
     file_path = os.path.join(base_path, filename)
@@ -34,7 +34,7 @@ def save_file(filename, content, base_path):
 
 if __name__ == "__main__":
     # Example usage
-    save_file("rj.txt", "THIS IS Awesome!!!!!!!!!!", text_base_path)
-    save_file("document.txt", "%This adds another", pdf_base_path)
+    # save_file("rj.txt", "THIS IS Awesome!!!!!!!!!!", text_base_path)
+    save_file("document_new.txt", "this works successfully", pdf_base_path)
 
     print("Files saved successfully")

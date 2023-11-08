@@ -4,5 +4,5 @@ services:
     build: .
     image: ml-test
     volumes:
-      - /mnt/efs/data:/app/data
-      # - ~/.aws:/root/.aws
+      - /mnt/efs:/app
+            # - ~/.aws:/root/.aws
